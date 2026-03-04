@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>piggyboo</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<!-- 左上角切换按钮 -->
+<a href="/" class="mode-switch">← 切换到自动模式</a>
+
+<div class="page-center">
+    <div class="card manual-card">
+
+        <h1 class="title">📝 人工输入分析</h1>
+
+        <!-- 标题（非必填） -->
+        <input
+            id="titleInput"
+            class="text-input"
+            placeholder="标题（可选）"
+        >
+
+        <!-- 正文（必填） -->
+        <textarea
+            id="contentInput"
+            class="text-area"
+            placeholder="请输入正文内容（必填）"
+        ></textarea>
+
+        <!-- 按钮区 -->
+        <div class="btn-row">
+            <button class="btn primary" onclick="submitManual(false)">
+                ▶ 开始分析
+            </button>
+            <button class="btn ghost" onclick="submitManual(true)">
+                ➕ 下一条
+            </button>
+        </div>
+
+        <!-- 提示信息 -->
+        <div id="manualMsg" class="msg"></div>
+
+    </div>
+</div>
+    <script src="/static/js/manual.js"></script>
+    <script src="/static/js/crawl.js"></script>
+</body>
+</html>

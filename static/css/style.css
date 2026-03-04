@@ -1,0 +1,263 @@
+/* ===== 页面整体居中 ===== */
+.page-center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0b0e1a;
+}
+
+/* ===== 卡片 ===== */
+.card {
+    width: 480px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.35);
+    text-align: center;
+}
+
+.card-large {
+    width: 640px;
+}
+
+/* ===== 标题 ===== */
+.title {
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #fff;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+/* ===== 输入行 ===== */
+.input-row {
+    display: flex;
+    gap: 12px;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    outline: none;
+}
+
+.input-row button {
+    padding: 14px 24px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #7f3cff, #ff4d9d);
+    color: white;
+}
+
+/* ===== 加载图 ===== */
+.loading-img {
+    width: 60px;
+    margin: 20px 0;
+}
+
+/* ===== 日志框 ===== */
+.log-box {
+    height: 260px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 13px;
+    text-align: left;
+    color: #e0e0e0;
+}
+.manual-entry {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    z-index: 50; /* 🔥 关键 */
+
+    color: #ffb6c1;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid rgba(255,182,193,0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+    background: rgba(0,0,0,0.35);
+    transition: all 0.3s ease;
+}
+
+.manual-entry:hover {
+    background: rgba(255,182,193,0.15);
+    box-shadow: 0 0 10px rgba(255,182,193,0.6);
+}
+
+
+.manual-card {
+    width: 520px;
+}
+
+.title-input {
+    margin-bottom: 12px;
+}
+
+.textarea {
+    width: 100%;
+    height: 160px;
+    background: #0e0e15;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 14px;
+    color: #fff;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+}
+
+.textarea:focus {
+    border-color: #ff5f87;
+}
+
+.btn-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+button.secondary {
+    background: transparent;
+    border: 1px solid #ff5f87;
+    color: #ff5f87;
+}
+
+.hint {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #aaa;
+}
+/* ====== 左上角模式切换 ====== */
+.mode-switch {
+    position: fixed;
+    top: 20px;
+    left: 24px;
+    color: #9aa4ff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.85;
+    z-index: 10;
+}
+
+.mode-switch:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ====== Manual 页面卡片 ====== */
+.manual-card {
+    width: 520px;
+}
+
+/* ====== 输入框统一风格 ====== */
+.text-input,
+.text-area {
+    width: 100%;
+    background: #0f1322;
+    border: 1px solid #2a2f55;
+    color: #e6e8ff;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    margin-bottom: 14px;
+}
+
+.text-input::placeholder,
+.text-area::placeholder {
+    color: #6f75b5;
+}
+
+.text-input:focus,
+.text-area:focus {
+    border-color: #7c83ff;
+    box-shadow: 0 0 0 2px rgba(124, 131, 255, 0.2);
+}
+
+.text-area {
+    min-height: 160px;
+    resize: vertical;
+}
+
+/* ====== 按钮区域 ====== */
+.btn-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* ====== 按钮样式 ====== */
+.btn {
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+/* 主按钮 */
+.btn.primary {
+    background: linear-gradient(135deg, #7c83ff, #a58bff);
+    color: #fff;
+}
+
+.btn.primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(124, 131, 255, 0.4);
+}
+
+/* 次按钮 */
+.btn.ghost {
+    background: transparent;
+    border: 1px solid #444a88;
+    color: #cdd1ff;
+}
+
+.btn.ghost:hover {
+    background: rgba(124, 131, 255, 0.08);
+}
+
+/* ====== 提示文字 ====== */
+.msg {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #9cffc7;
+    text-align: center;
+}
+
+/* 背景 canvas */
+#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+
+/* 页面内容在上层 */
+.page-center {
+    position: relative;
+    z-index: 2;
+}

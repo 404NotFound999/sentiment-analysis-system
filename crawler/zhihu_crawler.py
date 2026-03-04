@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.options import Options
 from db import get_conn
+from service.analysis_service import analyze_all_articles
 
 
 def log(msg):
@@ -134,5 +135,6 @@ def run_crawler(keyword):
     conn.close()
     wd.quit()
     log("爬虫任务完成")
+
 
 

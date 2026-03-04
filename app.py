@@ -37,7 +37,7 @@ def start_crawl():
 def get_progress():
     conn = get_conn()
     cur = conn.cursor(pymysql.cursors.DictCursor)
-    cur.execute("SELECT message FROM crawl_log ORDER BY id DESC LIMIT 50")
+    cur.execute("SELECT message FROM crawl_log ORDER BY id DESC LIMIT 500")
     data = cur.fetchall()
     cur.close()
     conn.close()
@@ -123,9 +123,13 @@ def analysis_page():
         sentiment_stats=sentiment_stats,
         keywords=keywords
     )
+
+
 @app.route("/dashboard")
 def dashboard():
     return render_template("dashboard.html")
+
+
 
 @app.route("/api/articles_with_sentiment")
 def articles_with_sentiment():
